@@ -1,0 +1,60 @@
+.Welcome 
+    height: 100vh
+    width: inherit
+    // border: blue 1px solid
+
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    // background-image: url('../../assets/background-laptop.jpg')
+    // background-attachment: fixed
+
+
+.Welcome img 
+    z-index: -1
+    filter: brightness(60%) 
+
+    position: fixed
+
+    height: 100%
+    width: 100%
+
+    object-fit: cover
+
+.Welcome_message
+    position: absolute
+    margin-top: 20rem
+    color: white
+    filter: drop-shadow(2px 4px 6px black)
+    display: block
+    font-family: monospace
+    white-space: nowrap
+
+.Welcome_message h1 
+    font-size: 7rem
+    border-right: 4px solid
+    width: 11ch
+    overflow: hidden
+    animation: typing 2s steps(11), blink .5s infinite step-end alternate
+
+
+@keyframes typing
+    from 
+        width: 0
+
+@keyframes blink 
+    50%  
+        border-color: transparent 
+
+
+@media (max-width:430px) 
+    .Welcome_message h1 
+        font-size: 4rem
+    
+
+
+@media (min-width:900px) 
+    .Welcome_message h1 
+        font-size: 7rem
+    
