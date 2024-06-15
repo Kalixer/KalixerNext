@@ -1,17 +1,21 @@
 .Welcome 
-    height: 100vh
-    width: inherit
-    // border: blue 1px solid
+  height: 100vh
+  width: inherit
 
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &__message
+    color: white
+    filter: drop-shadow(2px 4px 6px black)
+    display: block
+    font-family: monospace
+    white-space: nowrap
     display: flex
-    flex-direction: column
-    align-items: center
-
-    // background-image: url('../../assets/background-laptop.jpg')
-    // background-attachment: fixed
 
 
-.Welcome img 
+.Welcome > img
     z-index: -1
     filter: brightness(60%) 
 
@@ -22,21 +26,15 @@
 
     object-fit: cover
 
-.Welcome_message
-    position: absolute
-    margin-top: 20rem
-    color: white
-    filter: drop-shadow(2px 4px 6px black)
-    display: block
-    font-family: monospace
-    white-space: nowrap
-
-.Welcome_message h1 
+.Welcome__message > h1
+    margin-bottom: 32vh
+    position: relative
     font-size: 7rem
     border-right: 4px solid
     width: 11ch
     overflow: hidden
     animation: typing 2s steps(11), blink .5s infinite step-end alternate
+
 
 
 @keyframes typing
@@ -52,8 +50,6 @@
     .Welcome_message h1 
         font-size: 4rem
     
-
-
 @media (min-width:900px) 
     .Welcome_message h1 
         font-size: 7rem
