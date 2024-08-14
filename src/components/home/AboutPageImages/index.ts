@@ -1,0 +1,1 @@
+export { AboutPageImages } from './AboutPageImages'

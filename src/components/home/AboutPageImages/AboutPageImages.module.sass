@@ -1,0 +1,56 @@
+.AboutPageImages
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__image1
+        width: 90vw
+        height: 450px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    &__quoteAndImage
+        margin: 4rem
+        width: 90vw
+        height: 350px
+        display: flex
+        justify-content: space-between
+
+        &_quote
+            height: 300px
+            width: 35vw
+            display: flex
+            font-size: 2.6rem
+            margin: 4rem
+            p
+                padding: 8rem 3rem
+                font-weight: 600
+
+        &_image2
+            height: 350px
+            width: 45vw
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+@media( max-width: 450px )
+    .AboutPageImages
+        &__quoteAndImage
+            height: auto
+            display: flex
+            align-items: center
+            flex-direction: column
+
+            &_quote
+                width: 80vw
+                text-align: center
+
+            &_image2
+                width: 80vw
+                padding-bottom: 4rem
+
+    

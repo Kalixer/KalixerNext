@@ -2,6 +2,7 @@ import { Welcome } from 'app/components/home/Welcome'
 import { HomeAbout } from "app/components/home/HomeAbout";
 
 import styles from './page.module.sass'
+import { AboutPageImages } from 'app/components/home/AboutPageImages';
 
 export default function Home() {
   return (
@@ -9,9 +10,9 @@ export default function Home() {
         <Welcome/>
         <section>
             <HomeAbout/>
-            {/* <AboutPageImages/>
-            <WhatDoIDo/>
-            <AboutEnd/> */}
+            <AboutPageImages/>
+            {/* <WhatDoIDo/> */}
+            {/* <AboutEnd/> */}
         </section>
     </div>
   );
