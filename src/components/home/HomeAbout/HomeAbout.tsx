@@ -9,15 +9,15 @@ export const HomeAbout = () => {
 
     return (
         <div className={styles.HomeAbout}>
-            <div className={styles.introduction}>
-                <div className={styles.title_section}>
+            <div className={styles.HomeAbout__introduction}>
+                <div className={styles.HomeAbout__introduction_titleSection}>
                     <h1>About me</h1>
                 </div>
-                <div className={styles.description}>
-                    <div className={styles.message_1}>
+                <div className={styles.HomeAbout__introduction_description}>
+                    <div className={styles.HomeAbout__introduction_description_message1}>
                         <p>A man <br />A project <br />A begining</p>
                     </div>
-                    <div className={styles.message_2}>
+                    <div className={styles.HomeAbout__introduction_description_message2}>
                         <p>{lorem1}</p>
                         <p>{lorem2}</p>
                     </div>
