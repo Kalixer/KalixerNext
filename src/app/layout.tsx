@@ -3,6 +3,7 @@
 // import Header from "@components/Header.jsx";
 
 import 'app/sass/globals.sass'
+import { Header } from 'app/shared/Header/Header';
 
 // const FooterPositionContext = createContext();
 
@@ -12,14 +13,10 @@ const Layout = ({children}: {children: React.ReactNode}) => {
     return (
         <html>
             <body>
-                
-        {/* <FooterPositionContext.Provider value={{setHideFooter}}> */}
                 <div className="Layout">
-                    {/* <Header /> */}
+                    <Header/>
                     {children}
-                    {/* {hideFooter ? null : <Footer/>} */}
                 </div>
-        {/* </FooterPositionContext.Provider> */}
             </body>
         </html>
     );
