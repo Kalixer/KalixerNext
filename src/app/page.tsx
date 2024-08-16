@@ -3,6 +3,7 @@ import { HomeAbout } from "app/components/home/HomeAbout";
 
 import styles from './page.module.sass'
 import { AboutPageImages } from 'app/components/home/AboutPageImages';
+import { WhatDoIDo } from 'app/components/home/WhatDoIDo';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <section>
             <HomeAbout/>
             <AboutPageImages/>
-            {/* <WhatDoIDo/> */}
+            <WhatDoIDo/>
             {/* <AboutEnd/> */}
         </section>
     </div>

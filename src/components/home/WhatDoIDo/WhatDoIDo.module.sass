@@ -1,0 +1,89 @@
+.WhatDoIDo
+    width: 100vw
+    display: flex
+
+    &__macroLeft
+        height: 90vh
+        width: 50%
+        background-color: rgb(61, 61, 61)
+        border: 1px solid #333
+
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        text-align: center
+
+        &_macBox
+            border: white solid 3px
+            height: 300px
+            width: 50%
+
+            color: white
+
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        &_macBox:nth-child(1)
+            font-weight: bold
+            font-size: 2.2rem
+            height: 50%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+        &_macBox:nth-child(2)
+            padding: 2rem
+            font-size: 1.6rem
+            height: 60%
+            width: 80%
+            display: flex
+            flex-direction: column
+
+    &__macroRight
+        border: 1px solid #333
+        height: 90vh
+        width: 50%
+
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+
+        &_doBox
+            padding: 15px
+
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            padding: 20%
+            text-align: center
+
+            color: rgb(61, 61, 61)
+
+            h1
+                font-size: 2.6rem
+                margin-bottom: 1rem
+
+            p
+                font-size: 1.5rem
+
+
+@media (max-width: 500px)
+    .WhatDoIDo
+        flex-direction: column
+
+        &__macroLeft
+            width: 99.5%
+
+            &_macBox
+                height: 60%
+                width: 75%
+
+        &__macroRight
+            width: 100vw
+            border-top: none
+            border-left: none
+            border-right: none
