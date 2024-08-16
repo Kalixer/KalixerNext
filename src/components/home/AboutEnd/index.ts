@@ -1,0 +1,1 @@
+export { AboutEnd } from './AboutEnd'
