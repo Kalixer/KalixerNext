@@ -9,8 +9,21 @@ export const Welcome = () => {
                 src={background} 
                 alt="" 
             />
-            <div className={styles.Welcome__message}>
-                <h1>Hello There</h1>
+            <div className={styles.Welcome__Container}>
+                <div className={styles.Welcome__Container__message}>
+                    <h3>FrontEnd Dev</h3>
+                    <h1>I'm Alejandro Cáceres</h1>
+                    {/* <p className={styles.Welcome__Container__message_p}>
+                        {`I am a FrontEnd developer with skills in technologies like HTML, CSS, JS and frameworks like React.js and Next.js.
+                        Although most of my focus has been on studying, I have experience on real world projects for real companies like Solve ltda. and TopScan.
+                        {Also this website was built in React and migrated to Next.js as one of my portfolio projects.`}
+                    </p> */}
+
+                    <p>I am a FrontEnd developer with skills in techologies like HTML, CSS, JS and frameworks like React.js and Next.js <br /> 
+                    Although most of my focus has been on studying, I have experience on real world projects for real companies like Solve ltda. and TopScan. <br /> 
+                    Also this website was built in React and migrated to Nexts.js as one of my portfolio projects
+                    </p>
+                </div>
             </div>
         </div>
     )
