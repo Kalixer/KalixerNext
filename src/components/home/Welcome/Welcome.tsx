@@ -1,4 +1,5 @@
 // import Image from 'next/image'
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import styles from './Welcome.module.sass'
 
 export const Welcome = () => {
@@ -24,6 +25,10 @@ export const Welcome = () => {
                     Also this website was built in React and migrated to Nexts.js as one of my portfolio projects
                     </p>
                 </div>
+                <button type='button' className={styles.Welcome__Container__button}>
+                    <p>See projects</p>
+                    <HiOutlineArrowNarrowRight className={styles.Welcome__Container__button_icon}/>
+                </button>
             </div>
         </div>
     )
