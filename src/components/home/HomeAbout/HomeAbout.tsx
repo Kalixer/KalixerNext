@@ -33,7 +33,7 @@ export const HomeAbout = () => {
                 </div>
                 <div className={styles.HomeAbout__introduction_description}>
                     <div className={styles.HomeAbout__introduction_description_message1}>
-                        <p>A man <br />A project <br />A begining</p>
+                        <p>Curiosity <br />Growth <br />Creation</p>
                     </div>
                     <div className={styles.HomeAbout__introduction_description_message2}>
                         {
