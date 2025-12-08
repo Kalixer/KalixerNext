@@ -1,54 +1,92 @@
 .HomeAbout
-    padding-top: 5rem
+    // padding-top: 5rem
 
-    // height: 70vh
+    height: 100vh
 
     display: flex
     flex-direction: column
     align-items: center
+    justify-content: center
+
+    color: white
+
+    // background: linear-gradient(to top right, #000, #0e1111, #6100a7, #0000a7)
+    background: linear-gradient(to bottom right, #000, #3b444b)
 
     // border: 2px solid blue
+    position: relative
 
-    &__introduction 
-        height: auto
+    &__ImageCont
+        position: absolute
+        left: 32rem
+        height: 100vh
+        width: 26vw
+
+        // border: solid 2px red
+
+        &_Image
+            height: 100%
+            width: 100%
+            object-fit: cover
+            filter: brightness(60%)
+            // display: none
+
+    &__content 
+        z-index: 1
+        height: 60vh
+        width: 86%
         display: flex
-        flex-direction: column
+        flex-direction: row
         align-items: center
+        justify-content: space-between
         margin-bottom: 8rem
+        
+        // border: solid 2px orange
 
-        &_titleSection 
-            // border: 1px solid purple
-            width: 40vw
-            
-            h1 
-                // text-align: center
-                font-size: 5rem
-                // border: 1px solid red
+        &__legend
+            // height: 100%
+            // width: 100px
+
+            text-align: center
+            display: flex
+            // justify-content: center
+            padding-top: 1rem
+            font-size: 1.6rem
+            color: grey
+            // width: 20vw
+
 
         &_description
-            width: 80vw
-            height: auto
+            width: 46vw
+            height: 100%
             // border: 1px solid brown
 
             // margin: 3rem
             display: flex
             justify-content: space-between
+            flex-direction: column
+
+
+            &_titleSection 
+                // border: 1px solid purple
+            
+            h1 
+                // text-align: center
+                font-size: 5rem
+                display: inline-block
+                border-bottom: 2px solid white
+
+            h3
+                font-size: 2rem
+                font-weight: normal
     
-            &_message1
-                // border: 1px solid green
-                text-align: center
+            
+            &_message
+                width: auto
 
-                display: flex
-                // justify-content: center
-
-                padding-top: 1rem
-
-                font-size: 1.6rem
-                color: grey
-                width: 20vw
-            &_message2
+                // border: solid 1px blue
                 font-size: 1.8rem
-                width: 65vw
+                // width: 65vw
 
                 &_p
                     font-size: 1.6rem
