@@ -1,13 +1,16 @@
 // import Image from 'next/image'
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import styles from './Welcome.module.sass'
+import Image from "next/image";
 
 export const Welcome = () => {
     const background = 'https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1'
     return(
         <div className={styles.Welcome}>
-            <img
+            <Image
                 src={background} 
+                height={100}
+                width={100}
                 alt="" 
             />
             <div className={styles.Welcome__Container}>
