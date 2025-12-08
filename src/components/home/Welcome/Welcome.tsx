@@ -25,10 +25,17 @@ export const Welcome = () => {
                     Also this website was built in React and migrated to Nexts.js as one of my portfolio projects
                     </p>
                 </div>
-                <button type='button' className={styles.Welcome__Container__button}>
-                    <p>See projects</p>
-                    <HiOutlineArrowNarrowRight className={styles.Welcome__Container__button_icon}/>
-                </button>
+                <div className={styles.Welcome__Container__Inputs}>
+                    <button type='button' className={styles.Welcome__Container__Inputs__button}>
+                        <p>CV</p>
+                        <HiOutlineArrowNarrowRight className={styles.Welcome__Container__Inputs__button_icon}/>
+                    </button>
+                    <button type='button' className={styles.Welcome__Container__Inputs__button}>
+                        <p>Portfolio</p>
+                        <HiOutlineArrowNarrowRight className={styles.Welcome__Container__Inputs__button_icon}/>
+                    </button>
+
+                </div>
             </div>
         </div>
     )
