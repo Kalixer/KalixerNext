@@ -32,15 +32,6 @@ export const HomeAbout = () => {
     return (
         <div className={styles.HomeAbout}>
 
-            <figure className={styles.HomeAbout__ImageCont}>
-                <Image 
-                    src={imageSrc}
-                    width={500}
-                    height={500}
-                    alt="Image of a computer representing my conection to them"
-                    className={styles.HomeAbout__ImageCont_Image}
-                />
-            </figure>
 
 
             <div className={styles.HomeAbout__content}>
@@ -49,6 +40,15 @@ export const HomeAbout = () => {
                     <p>Curiosity <br />Growth <br />Creation</p>
                 </div>
 
+                <figure className={styles.HomeAbout__content__ImageCont}>
+                    <Image 
+                        src={imageSrc}
+                        width={500}
+                        height={500}
+                        alt="Image of a computer representing my conection to them"
+                        className={styles.HomeAbout__content__ImageCont_Image}
+                    />
+                </figure>
 
                 <div className={styles.HomeAbout__content_description}>
 
