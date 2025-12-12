@@ -4,8 +4,34 @@
 
     color: white
 
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+    &__Card
+        border: solid 2px grey
+        height: 90vh
+        width: 90vw
+        border-radius: 20px
+
+        &__ImageCont
+            z-index: -1
+            position: absolute
+            height: 90vh
+            width: 90vw
+            border-radius: 20px
+            // border: solid 2px blue
+
+            &_img
+                border-radius: 16px
+                height: 100%
+                width: 100%
+                filter: brightness(50%) 
+                object-fit: cover
+
     &__Container
-        // border: solid 1px green
+        // border: solid 2px green
         height: 360px
         // min-width: 40%
         max-width: 50%
@@ -120,17 +146,6 @@
             &__button:hover::after
                 border-right: solid 2px #f0f0f0
                 width: 100%
-
-.Welcome > img
-    z-index: -1
-    filter: brightness(60%) 
-
-    position: absolute
-
-    height: 100%
-    width: 100%
-
-    object-fit: cover
 
 .Welcome__Container__message > h3
     border-right: 4px solid
