@@ -15,8 +15,12 @@
 
     color: white
 
+    background-color: rgba(0, 0, 0, 0.8)
+
     transition: background-color 0.2s ease
-    z-index: 1
+    z-index: 2
+
+    text-shadow: 0 10px 10px black
 
     &__TopSection
         width: 100vw
@@ -68,10 +72,9 @@
     &__BottomSection
         display: none
 
-
-// .Header:hover 
-//     background-color: rgba(0, 0, 0, 0.8)
-
+.Header:hover
+    cursor: pointer
+    
 
 @media (max-width: 500px)
     .Header
