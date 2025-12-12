@@ -1,0 +1,1 @@
+export { HomeFastData } from './HomeFastData'
