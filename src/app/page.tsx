@@ -6,7 +6,7 @@ import { AboutPageImages } from 'app/components/home/AboutPageImages';
 import { WhatDoIDo } from 'app/components/home/WhatDoIDo';
 import { AboutEnd } from 'app/components/home/AboutEnd';
 import { HomeFastData } from 'app/components/home/HomeFastData';
-import { HomeSpecialist } from 'app/components/home/HomeSpecialist';
+import { HomeSpecialist } from 'app/components/home/HomeSpecialist/HomeSpecialist';
 
 export default function Home() {
   return (

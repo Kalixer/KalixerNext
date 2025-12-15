@@ -1,1 +1,1 @@
-export { HomeSpecialist } from './HomeSpecialist'
+import { HomeSpecialist } from './HomeSpecialist';
