@@ -51,12 +51,14 @@ export function Header() {
 
     return(
         <>
-            <div className={styles.Header} id="head"
-            style={{
-                height: `${headerSize}`,
-                backgroundColor: menuOpen ? 'rgba(0, 0, 0, 0.8)' : 'transparent'
-            }}
+            <div 
+                className={styles.Header} id="head"
+                style={{
+                    height: `${headerSize}`,
+                    // backgroundColor: menuOpen ? 'rgba(0, 0, 0, 0.8)' : 'transparent'
+                }}
             >
+
                 <div className={styles.Header__TopSection}>
                     <button 
                         className={styles.Header__TopSection__MenuResponsive} 
