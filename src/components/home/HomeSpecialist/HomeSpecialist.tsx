@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './HomeSpecialist.module.sass'
+import { SpecialistContent } from './SpecialistContent/SpecialistContent'
 
 export function HomeSpecialist() {
 
@@ -9,7 +10,9 @@ export function HomeSpecialist() {
         <div className={styles.HomeSpecialist}>
             <div className={styles.HomeSpecialist__ContentContainer}>
 
-                <div className={styles.HomeSpecialist__ContentContainer_ContentSec}></div>
+                <div className={styles.HomeSpecialist__ContentContainer_ContentSec}>
+                    <SpecialistContent/>
+                </div>
 
 
                 <div className={styles.HomeSpecialist__ContentContainer_ImageSec}>
