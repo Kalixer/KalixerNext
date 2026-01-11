@@ -7,6 +7,7 @@ import { WhatDoIDo } from 'app/components/home/WhatDoIDo';
 import { AboutEnd } from 'app/components/home/AboutEnd';
 import { HomeFastData } from 'app/components/home/HomeFastData';
 import { HomeSpecialist } from 'app/components/home/HomeSpecialist/HomeSpecialist';
+import { HomeExperience } from 'app/components/home/HomeExperience';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
             <HomeAbout/>
             {/* <AboutPageImages/> */}
             <HomeSpecialist/>
+            <HomeExperience/>
             <WhatDoIDo/>
             <AboutEnd/>
         </section>
