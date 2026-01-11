@@ -4,7 +4,7 @@ import { ExperienceContent } from './ExperienceContent'
 
 export function HomeExperience() {
 
-    const imagen = 'https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    const imagen = 'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 
     return (
         <div className={styles.HomeExperience}>
