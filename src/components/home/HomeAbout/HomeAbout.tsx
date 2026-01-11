@@ -1,6 +1,7 @@
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import styles from './HomeAbout.module.sass'
 import Image from 'next/image'
+import { AnimButton } from 'app/shared/AnimButton'
 
 export const HomeAbout = () => {
 
@@ -67,10 +68,7 @@ export const HomeAbout = () => {
                             })
                         }
                     </div>
-                    <button type='button' className={styles.HomeAbout__content_description_button}>
-                        <p>About me</p>
-                        <HiOutlineArrowNarrowRight className={styles.Welcome__Container__Inputs__button_icon}/>
-                    </button>
+                    <AnimButton title="Sobre mi"/>
 
                 </div>
                 

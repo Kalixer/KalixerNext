@@ -2,6 +2,7 @@
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import styles from './Welcome.module.sass'
 import Image from "next/image";
+import { AnimButton } from "app/shared/AnimButton";
 
 export const Welcome = () => {
     const background = 'https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1'
@@ -32,15 +33,8 @@ export const Welcome = () => {
                     </p>
                 </div>
                 <div className={styles.Welcome__Container__Inputs}>
-                    <button type='button' className={styles.Welcome__Container__Inputs__button}>
-                        <p>CV</p>
-                        <HiOutlineArrowNarrowRight className={styles.Welcome__Container__Inputs__button_icon}/>
-                    </button>
-                    <button type='button' className={styles.Welcome__Container__Inputs__button}>
-                        <p>Portfolio</p>
-                        <HiOutlineArrowNarrowRight className={styles.Welcome__Container__Inputs__button_icon}/>
-                    </button>
-
+                    <AnimButton title="CV" />
+                    <AnimButton title="About me" />
                 </div>
             </div>
         </div>
