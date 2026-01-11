@@ -15,17 +15,20 @@ export const Welcome = () => {
             />
             <div className={styles.Welcome__Container}>
                 <div className={styles.Welcome__Container__message}>
-                    <h3>FrontEnd Dev</h3>
-                    <h1>I'm Alejandro Cáceres</h1>
+                    <h3>Front-End Developer</h3>
+                    <h1>Hi, I'm Alejandro Cáceres</h1>
                     {/* <p className={styles.Welcome__Container__message_p}>
                         {`I am a FrontEnd developer with skills in technologies like HTML, CSS, JS and frameworks like React.js and Next.js.
                         Although most of my focus has been on studying, I have experience on real world projects for real companies like Solve ltda. and TopScan.
                         {Also this website was built in React and migrated to Next.js as one of my portfolio projects.`}
                     </p> */}
 
-                    <p>I am a FrontEnd developer with skills in techologies like HTML, CSS, JS and frameworks like React.js and Next.js <br /> 
-                    Although most of my focus has been on studying, I have experience on real world projects for real companies like Solve ltda. and TopScan. <br /> 
-                    Also this website was built in React and migrated to Nexts.js as one of my portfolio projects
+                    <p>
+                        I build modern, responsive web interfaces using HTML, CSS, JavaScript, React, and Next.js. <br />
+                        While most of my journey has been focused on continuous learning, I’ve also worked on real-world projects for companies like Solve Ltda. and TopScan.
+                    </p>
+                    <p>
+                        This website itself is part of my portfolio: originally built with React and later migrated to Next.js as a practical learning project.
                     </p>
                 </div>
                 <div className={styles.Welcome__Container__Inputs}>
