@@ -90,10 +90,81 @@
                 // width: 65vw
 
                 &_p
-                    font-size: 1.6rem
+                    font-size: 1.8rem
                     font-weight: normal
                     text-indent: 2rem
                     margin-top: 1.6rem
+
+            &_button
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: center
+                font-family: monospace
+                font-weight: bold
+                height: 50px
+                width: 150px
+
+                margin-top: 4rem
+                // padding-right: 10px
+                cursor: pointer
+                padding-left: 10px
+
+                // border: solid 2px #f0f0f0
+                border-radius: 14px
+                border: none
+
+                color: #ffffff
+                background-color: #00000000
+
+                filter: drop-shadow(2px 4px 6px black)
+
+                // animation
+                position: relative
+                // overflow: hidden
+
+                // border: solid 1px blue
+                margin-right: 6rem
+
+                &::before
+                    content: ""
+                    position: absolute
+                    inset: 0
+                    border-radius: 16px
+                    border: 3px solid transparent
+                    // border-left-color: #fff
+
+                    /* Start collapsed */
+                    width: 0%
+                    transition: width 0.35s ease
+
+                &::after
+                    content: ""
+                    position: absolute
+                    inset: 0
+                    border-radius: 16px
+                    border: 3px solid transparent
+                    border-right-color: #fff
+
+                    /* Start collapsed */
+                    width: 0%
+                    transition: width 0.35s ease
+
+                &_icon
+                    height: 20px
+                    width: 20px
+                    margin-left: 10px
+
+            // &__button:hover
+            //     border: solid 2px #f0f0f0
+            &_button:hover::before
+                width: 100%
+                cursor: pointer
+                border: solid 2px #f0f0f0
+
+            &_button:hover::after
+                border-right: solid 2px #f0f0f0
+                width: 100%
 
 
 
