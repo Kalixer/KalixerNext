@@ -1,0 +1,140 @@
+@import "app/sass/variables.sass"
+
+.HomeEducation
+    padding: 10rem 5%
+    background: transparent
+    position: relative
+
+    &__Container
+        max-width: 1400px
+        margin: 0 auto
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 6rem
+
+    &__Header
+        text-align: center
+        max-width: 800px
+        margin: 0 auto
+
+    &__Title
+        font-family: $font-primary
+        font-size: 5rem
+        font-weight: 800
+        margin-bottom: 2rem
+        line-height: 1.1
+
+        @media (max-width: 768px)
+            font-size: 3.5rem
+
+    &__Highlight
+        background: $gradient-primary
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+    &__Subtitle
+        font-family: $font-secondary
+        font-size: 1.8rem
+        color: $text-secondary
+        line-height: 1.6
+
+    &__Grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 6rem
+        
+        @media (max-width: 1024px)
+            gap: 4rem
+        
+        @media (max-width: 768px)
+            grid-template-columns: 1fr
+
+    &__Column
+        display: flex
+        flex-direction: column
+        gap: 3rem
+
+    &__ColumnTitle
+        font-family: $font-primary
+        font-size: 3.5rem
+        font-weight: 800
+        margin-bottom: 3rem
+        display: flex
+        align-items: center
+        gap: 1.5rem
+        color: $text-main
+        
+        @media (max-width: 768px)
+            font-size: 3rem
+            justify-content: center
+
+        span
+            background: $gradient-primary
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+
+        svg
+            font-size: 4rem
+            min-width: 4rem
+            color: $primary-accent
+            filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3))
+
+    &__List
+        display: flex
+        flex-direction: column
+        gap: 2rem
+
+    &__Card
+        background: $background-secondary
+        border: 1px solid $border-light
+        padding: 2.5rem
+        border-radius: 16px
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+        position: relative
+        overflow: hidden
+
+        &:hover
+            transform: translateY(-5px)
+            border-color: $primary-accent
+            box-shadow: $shadow-glow
+
+    &__CardHeader
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-bottom: 1rem
+        gap: 1rem
+
+        @media (max-width: 500px)
+            flex-direction: column
+
+    &__Role
+        font-family: $font-primary
+        font-size: 2rem
+        font-weight: 700
+        color: $text-main
+        line-height: 1.2
+
+    &__Date
+        font-family: $font-secondary
+        font-size: 1.4rem
+        font-weight: 600
+        color: $primary-accent
+        background: rgba(99, 102, 241, 0.1)
+        padding: 0.4rem 1rem
+        border-radius: 50px
+        white-space: nowrap
+
+    &__Institution
+        font-family: $font-secondary
+        font-size: 1.6rem
+        color: $text-main
+        margin-bottom: 1rem
+        font-weight: 500
+
+    &__Description
+        font-family: $font-secondary
+        font-size: 1.5rem
+        color: $text-secondary
+        line-height: 1.6

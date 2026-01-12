@@ -6,26 +6,29 @@ interface AnimButtonProps {
     title: string;
     href?: string;
     onClick?: () => void;
+    className?: string;
 }
 
-export const AnimButton = ({ title, href, onClick }: AnimButtonProps) => {
+export const AnimButton = ({ title, href, onClick, className = '' }: AnimButtonProps) => {
     const content = (
-        <>
-            <p>{title}</p>
-            <HiOutlineArrowNarrowRight className={styles.AnimButton_icon} />
-        </>
+        <span className={styles.AnimButton__Content}>
+            <span className={styles.AnimButton__Text}>{title}</span>
+            <HiOutlineArrowNarrowRight className={styles.AnimButton__Icon} />
+        </span>
     )
+
+    const combinedClass = `${styles.AnimButton} ${className}`.trim();
 
     if (href) {
         return (
-            <Link href={href} className={styles.AnimButton}>
+            <Link href={href} className={combinedClass}>
                 {content}
             </Link>
         )
     }
 
     return (
-        <button type='button' className={styles.AnimButton} onClick={onClick}>
+        <button type='button' className={combinedClass} onClick={onClick}>
             {content}
         </button>
     )

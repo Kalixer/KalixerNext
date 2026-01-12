@@ -1,57 +1,92 @@
+@import "app/sass/variables.sass"
+
 .ExperienceContent
-    height: 100%
+    width: 100%
 
-    position: relative
-    left: 12rem
-
-    h1
+    &__Title
+        font-family: $font-primary
         font-size: 5rem
-        // border: solid 2px red
-        display: inline
-        margin-left: 6rem 
-        padding: 0 2rem
-        border-bottom: solid 2px black
+        font-weight: 800
+        margin-bottom: 4rem
+        background: $gradient-primary
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        display: inline-block
+        line-height: 1.1
 
+        @media (max-width: 768px)
+            font-size: 3.5rem
+            text-align: center
+            display: block
+            margin-bottom: 3rem
 
-    ul
-        margin-top: 4rem
+    &__List
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        width: 100%
+        padding: 0
+        margin: 0
 
-        width: 85%
+    &__Item
+        list-style: none
+        display: flex
+        align-items: flex-start
+        gap: 2rem
+        padding: 2.5rem
+        border-radius: 16px
+        
+        // Theme Aware Colors
+        background-color: $background-secondary 
+        border: 1px solid $border-light
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
 
-        li
-            width: auto
-            list-style: none
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+
+        &:hover
+            transform: translateY(-5px)
+            border-color: $primary-accent
+            box-shadow: $shadow-glow
+
+            .ExperienceContent__Item_Icon
+                color: $primary-accent
+                filter: brightness(1.2)
+                transform: scale(1.1) rotate(5deg)
+
+        &_Icon
             display: flex
-            flex-direction: row
+            align-items: center
+            justify-content: center
+            font-size: 3rem
+            color: $primary-accent
+            transition: all 0.3s ease
+            padding-top: 0.2rem
+            min-width: 3rem
 
-            // border: solid 2px blue
-            position: relative
-            // justify-content: space-around
-            margin-bottom: 4.4rem
+        &_Text
+            display: flex
+            flex-direction: column
+            text-align: left
+            width: 100%
 
-            svg
-                height: 44px
-                width: 44px
-                margin-right: 1.6rem
-            
-            div
-                display: flex
-                flex-direction: column
-                // border: solid 2px green
+            h3
+                font-family: $font-primary
+                font-size: 2.2rem
+                font-weight: 700
+                color: $text-main
+                margin-bottom: 0.8rem
 
-                width: 90%
-                // position: absolute
-                // right: 0
+            p
+                font-family: $font-secondary
+                font-size: 1.6rem
+                color: $text-secondary
+                line-height: 1.6
 
+    &__Actions
+        margin-top: 4rem
+        display: flex
+        justify-content: flex-start
+        width: 100%
 
-                h3
-                    font-size: 3.2rem
-                    text-align: left
-                    height: 44px
-                    display: flex
-                    align-items: center
-
-                p
-                    font-size: 2rem
-                    font-weight: normal
-                    // margin-left: 6.4rem
+        @media (max-width: 768px)
+            justify-content: center

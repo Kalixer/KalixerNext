@@ -6,24 +6,26 @@ import { RiJavascriptFill } from 'react-icons/ri';
 import { SiNextdotjs } from "react-icons/si";
 
 
+import { AnimButton } from "app/shared/AnimButton";
+
 export function ExperienceContent() {
 
     const technologies = [
         {
             key: 0,
-            icon: <PiBuildingApartmentLight/>,
+            icon: <PiBuildingApartmentLight />,
             technology: `Solve`,
             description: `Desarrollé de forma completamente autónoma el sitio web de la empresa Solve.ltda con tecnologías como React.js, Next.js y Sass`
         },
         {
             key: 0,
-            icon: <PiEngineBold/>,
+            icon: <PiEngineBold />,
             technology: `TopScan`,
             description: `Desarrollé el sitio web de la empresa TopScan para ayudar en la captación de clientes y darle seriedad a la empresa`
         },
         {
             key: 0,
-            icon: <PiHammer/>,
+            icon: <PiHammer />,
             technology: `KalixerWeb`,
             description: `Este mismo sitio web es parte de mis proyectos personales. Como experiencia primero lo desarrollé en React y luego lo migré a Next`
         },
@@ -65,25 +67,31 @@ export function ExperienceContent() {
         // },
     ]
 
-    const technologiesRender = technologies.map((element) => {
+    const technologiesRender = technologies.map((element, index) => {
         return (
-            <li>
-                {element.icon}
-                <div>
+            <li key={index} className={styles.ExperienceContent__Item}>
+                <div className={styles.ExperienceContent__Item_Icon}>
+                    {element.icon}
+                </div>
+                <div className={styles.ExperienceContent__Item_Text}>
                     <h3>{element.technology}</h3>
                     <p>{element.description}</p>
                 </div>
-            </li> 
+            </li>
         )
     })
 
-    return(
+    return (
         <div className={styles.ExperienceContent}>
-            <h1>Experiencia y Proyectos</h1>
+            <h2 className={styles.ExperienceContent__Title}>Experiencia y Proyectos</h2>
 
-            <ul>
+            <ul className={styles.ExperienceContent__List}>
                 {technologiesRender}
             </ul>
+
+            <div className={styles.ExperienceContent__Actions}>
+                <AnimButton title="View all projects" href="/portfolio" />
+            </div>
         </div>
     )
 }

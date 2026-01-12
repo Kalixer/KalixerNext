@@ -8,20 +8,22 @@ import { AboutEnd } from 'app/components/home/AboutEnd';
 import { HomeFastData } from 'app/components/home/HomeFastData';
 import { HomeSpecialist } from 'app/components/home/HomeSpecialist/HomeSpecialist';
 import { HomeExperience } from 'app/components/home/HomeExperience';
+import { HomeEducation } from 'app/components/home/HomeEducation';
 
 export default function Home() {
   return (
     <div className={styles.AboutPage}>
-        <Welcome/>
-        <HomeFastData />
-        <section>
-            <HomeAbout/>
-            {/* <AboutPageImages/> */}
-            <HomeSpecialist/>
-            <HomeExperience/>
-            <WhatDoIDo/>
-            <AboutEnd/>
-        </section>
+      <Welcome />
+      <HomeFastData />
+      <section>
+        <HomeAbout />
+        {/* <AboutPageImages/> */}
+        <HomeSpecialist />
+        <HomeExperience />
+        <HomeEducation />
+        <WhatDoIDo />
+        <AboutEnd />
+      </section>
     </div>
   );
 }

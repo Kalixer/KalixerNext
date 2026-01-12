@@ -1,0 +1,1 @@
+export { HomeEducation } from './HomeEducation'

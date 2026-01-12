@@ -11,17 +11,16 @@ export const Welcome = () => {
             <div className={styles.Welcome__Content}>
                 <span className={styles.Welcome__Subtitle}>Front-End Developer</span>
                 <h1 className={styles.Welcome__Title}>
-                    Building Digital <span className={styles.Welcome__Highlight}>Experiences</span>
+                    I Code with <span className={styles.Welcome__Highlight}>Passion</span>
                 </h1>
 
                 <p className={styles.Welcome__Description}>
-                    I'm Alejandro Cáceres. I build modern, responsive web interfaces using React and Next.js.
-                    Focused on performance, accessibility, and premium aesthetics.
+                    Hi, I'm Alejandro! I'm a developer who cares deeply about the user experience. I build modern, responsive, and accessible websites using React and Next.js. My goal is to make the web a friendlier place, one line of code at a time.
                 </p>
 
                 <div className={styles.Welcome__Actions}>
-                    <AnimButton title="View Work" href="/portfolio" />
-                    <AnimButton title="Contact Me" href="mailto:contact@kalixer.com" />
+                    <AnimButton title="See My Work" href="/portfolio" />
+                    <AnimButton title="Let's Chat" href="mailto:contact@kalixer.com" />
                 </div>
             </div>
         </section>

@@ -1,60 +1,69 @@
+@import "app/sass/variables.sass"
+
 .AnimButton
-    display: flex
-    flex-direction: row
+    display: inline-flex
     align-items: center
     justify-content: center
-    font-family: monospace
-    font-weight: bold
-    height: 50px
-    width: 150px
-    // padding-right: 10px
+    padding: 1.4rem 2.8rem
+    
+    // Typography
+    font-family: $font-primary
+    font-size: 1.6rem
+    font-weight: 700
+    letter-spacing: 0.05em
+    color: $text-main
+    text-transform: uppercase
+
+    // Visuals
+    background: transparent
+    border: 1px solid $border-light
+    border-radius: 50px
     cursor: pointer
-    padding-left: 10px
-    // border: solid 2px #f0f0f0
-    border-radius: 14px
-    border: none
-    color: #ffffff
-    text-decoration: none
-    background-color: transparent
-    filter: drop-shadow(2px 4px 6px black)
-    // animation
     position: relative
-    // overflow: hidden
-    // border: solid 1px blue
-    margin-right: 6rem
+    overflow: hidden
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    text-decoration: none
+    margin: 0 // Reset margin
+    
+    // Initial state
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
 
-    &::before
-        content: ""
-        position: absolute
-        inset: 0
-        border-radius: 16px
-        border: 3px solid transparent
-        // border-left-color: #fff
-        /* Start collapsed */
-        width: 0%
-        transition: width 0.35s ease
-
-    &::after
-        content: ""
-        position: absolute
-        inset: 0
-        border-radius: 16px
-        border: 3px solid transparent
-        border-right-color: #fff
-        /* Start collapsed */
-        width: 0%
-        transition: width 0.35s ease
-         
-    &_icon
-        height: 20px
-        width: 20px
-        margin-left: 10px
+    &:hover
+        border-color: $primary-accent
+        box-shadow: $shadow-glow
+        transform: translateY(-2px)
+        background: rgba(255, 255, 255, 0.03) // Subtle filling
         
-.AnimButton:hover::before
-    width: 100%
-    cursor: pointer
-    border: solid 2px #f0f0f0
+        .AnimButton__Icon
+            transform: translateX(5px)
+            color: $primary-accent
 
-.AnimButton:hover::after
-    border-right: solid 2px #f0f0f0
-    width: 100%
+        .AnimButton__Text
+            color: $primary-accent
+
+    &__Content
+        display: flex
+        align-items: center
+        gap: 1.2rem
+        position: relative
+        z-index: 2
+        width: 100%
+        justify-content: center
+
+    &__Text
+        transition: color 0.3s ease
+
+    &__Icon
+        font-size: 2rem
+        transition: transform 0.3s ease, color 0.3s ease
+        color: $text-main // Default
+
+    // Accessible Focus
+    &:focus-visible
+        outline: 2px solid $primary-accent
+        outline-offset: 4px
+        box-shadow: $shadow-glow
+
+    @media (max-width: 768px)
+        padding: 1.2rem 2.4rem
+        font-size: 1.4rem
