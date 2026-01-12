@@ -1,36 +1,10 @@
-import Image from 'next/image'
 import styles from './HomeSpecialist.module.sass'
 import { SpecialistContent } from './SpecialistContent/SpecialistContent'
 
 export function HomeSpecialist() {
-
-    const imagen = 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-
     return (
-        <div className={styles.HomeSpecialist}>
-            <div className={styles.HomeSpecialist__ContentContainer}>
-
-                <div className={styles.HomeSpecialist__ContentContainer_ContentSec}>
-                    <SpecialistContent/>
-                </div>
-
-
-                <div className={styles.HomeSpecialist__ContentContainer_ImageSec}>
-                    <figure className={styles.HomeSpecialist__ContentContainer_ImageSec_fig}>
-                        <Image
-                            className={styles.HomeSpecialist__ContentContainer_ImageSec_fig_img}
-                            height={100}
-                            width={100}
-                            src={imagen}
-                            alt=''
-                            unoptimized
-                        />
-                    </figure>
-                </div>
-
-            </div>
-        </div>
+        <section className={styles.HomeSpecialist}>
+            <SpecialistContent />
+        </section>
     )
 }
-
-
