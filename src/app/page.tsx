@@ -9,6 +9,8 @@ import { HomeFastData } from 'app/components/home/HomeFastData';
 import { HomeSpecialist } from 'app/components/home/HomeSpecialist/HomeSpecialist';
 import { HomeExperience } from 'app/components/home/HomeExperience';
 import { HomeEducation } from 'app/components/home/HomeEducation';
+import { HomeWorking } from 'app/components/home/HomeWorking';
+import { HomeCTA } from 'app/components/home/HomeCTA';
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
         <HomeSpecialist />
         <HomeExperience />
         <HomeEducation />
+        <HomeWorking />
+        <HomeCTA />
         <WhatDoIDo />
         <AboutEnd />
       </section>

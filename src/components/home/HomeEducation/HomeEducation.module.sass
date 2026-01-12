@@ -41,14 +41,13 @@
 
     &__Grid
         display: grid
-        grid-template-columns: 1fr 1fr
-        gap: 6rem
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 4rem
         
-        @media (max-width: 1024px)
-            gap: 4rem
-        
-        @media (max-width: 768px)
+        @media (max-width: 1200px)
             grid-template-columns: 1fr
+            max-width: 800px
+            margin: 0 auto
 
     &__Column
         display: flex
