@@ -1,3 +1,4 @@
+"use client"
 import styles from './HomeWorking.module.sass'
 import { PiChatCircleText, PiRocketLaunch, PiScan, PiHandshake } from "react-icons/pi";
 

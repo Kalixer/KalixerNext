@@ -4,12 +4,14 @@ import Link from 'next/link'
 import { HiMenu, HiX, HiSun, HiMoon } from 'react-icons/hi'
 import { scrollToTop } from 'app/utils/scrollToTop'
 import { useTheme } from 'app/context/ThemeContext'
+import { useLanguage } from 'app/context/LanguageContext'
 import styles from './Header.module.sass'
 
 export function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const { theme, toggleTheme } = useTheme()
+    const { language, toggleLanguage, t } = useLanguage()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,21 +36,39 @@ export function Header() {
                 <div className={styles.Header__ConfigWrapper}>
                     <nav className={`${styles.Header__Nav} ${menuOpen ? styles.active : ''}`}>
                         <ul className={styles.Header__NavList}>
-                            {['About', 'Blog', 'Hobbies', 'Portfolio'].map((item) => (
-                                <li key={item} className={styles.Header__NavItem}>
-                                    <Link
-                                        href={`/${item.toLowerCase()}`}
-                                        onClick={() => { closeMenu(); scrollToTop(); }}
-                                    >
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
                             <li className={styles.Header__NavItem}>
-                                <a href="mailto:contact@kalixer.com">Contact</a>
+                                <Link href='/about' onClick={() => { closeMenu(); scrollToTop(); }}>
+                                    {t.header.about}
+                                </Link>
+                            </li>
+                            <li className={styles.Header__NavItem}>
+                                <Link href='/blog' onClick={() => { closeMenu(); scrollToTop(); }}>
+                                    {t.header.blog}
+                                </Link>
+                            </li>
+                            <li className={styles.Header__NavItem}>
+                                <Link href='/hobbies' onClick={() => { closeMenu(); scrollToTop(); }}>
+                                    {t.header.hobbies}
+                                </Link>
+                            </li>
+                            <li className={styles.Header__NavItem}>
+                                <Link href='/portfolio' onClick={() => { closeMenu(); scrollToTop(); }}>
+                                    {t.header.portfolio}
+                                </Link>
+                            </li>
+                            <li className={styles.Header__NavItem}>
+                                <a href="mailto:contact@kalixer.com">{t.header.contact}</a>
                             </li>
                         </ul>
                     </nav>
+
+                    <button
+                        className={styles.Header__LangToggle}
+                        onClick={toggleLanguage}
+                        aria-label="Toggle language"
+                    >
+                        {language === 'es' ? 'ES' : 'EN'}
+                    </button>
 
                     <button
                         className={styles.Header__ThemeToggle}

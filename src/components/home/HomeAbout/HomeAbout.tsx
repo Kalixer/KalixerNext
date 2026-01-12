@@ -1,9 +1,11 @@
+"use client"
 import styles from './HomeAbout.module.sass'
 import Image from 'next/image'
 import { AnimButton } from 'app/shared/AnimButton'
+import { useLanguage } from "app/context/LanguageContext";
 
 export const HomeAbout = () => {
-
+    const { t } = useLanguage();
     const imageSrc = 'https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1280&q=80'
 
     return (
@@ -28,13 +30,13 @@ export const HomeAbout = () => {
 
                 <div className={styles.HomeAbout__Content}>
                     <div className={styles.HomeAbout__Header}>
-                        <h2 className={styles.HomeAbout__Title}>About Me</h2>
+                        <h2 className={styles.HomeAbout__Title}>{t.homeAbout.title}</h2>
                         <a href="mailto:al.caceres.ag72@gmail.com" className={styles.HomeAbout__Email}>al.caceres.ag72@gmail.com</a>
                     </div>
 
                     <div className={styles.HomeAbout__Text}>
                         <p>
-                            I'm a self-taught Front-End developer driven by curiosity and a passion for turning ideas into real, functional web experiences.
+                            {t.homeAbout.description}
                         </p>
                         <p>
                             I enjoy building clean, intuitive interfaces and constantly challenging myself to learn, improve, and solve problems creatively.

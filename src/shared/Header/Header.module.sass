@@ -114,7 +114,7 @@
                 font-size: 2.4rem
                 color: $text-main
 
-    &__ThemeToggle
+    &__ThemeToggle, &__MenuToggle, &__LangToggle
         background: none
         border: none
         color: $text-main
@@ -132,14 +132,16 @@
             background: rgba(255, 255, 255, 0.1)
             color: $primary-accent
 
+    &__LangToggle
+        font-family: $font-secondary
+        font-size: 1.6rem
+        font-weight: 700
+        min-width: 4rem
+        border-radius: 8px
+
     &__MenuToggle
         display: none
-        background: none
-        border: none
-        color: $text-main
         font-size: 3rem
-        cursor: pointer
-        z-index: 1001
         
         @media (max-width: 768px)
             display: block

@@ -1,35 +1,35 @@
+"use client"
 import { FaLinux, FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from 'react-icons/ri';
 import { SiNextdotjs } from "react-icons/si";
+import { useLanguage } from "app/context/LanguageContext";
 import styles from './SpecialistContent.module.sass'
 
 export function SpecialistContent() {
+    const { t } = useLanguage();
+
     const technologies = [
         {
             icon: <FaReact />,
-            title: "React",
-            description: "Building dynamic, component-based user interfaces with cleaner logic and state management."
+            ...t.specialist.items.react
         },
         {
             icon: <SiNextdotjs />,
-            title: "Next.js",
-            description: "Leveraging server-side rendering and static generation for high-performance web applications."
+            ...t.specialist.items.next
         },
         {
             icon: <RiJavascriptFill />,
-            title: "JavaScript",
-            description: "Deep understanding of ES6+ features, async programming, and DOM manipulation."
+            ...t.specialist.items.js
         },
         {
             icon: <FaLinux />,
-            title: "Linux",
-            description: "Comfortable with command-line tools, environment configuration, and server management."
+            ...t.specialist.items.linux
         }
     ]
 
     return (
         <div className={styles.SpecialistContent}>
-            <h2 className={styles.Title}>Technologies I Master</h2>
+            <h2 className={styles.Title}>{t.specialist.title}</h2>
             <div className={styles.Grid}>
                 {technologies.map((tech, index) => (
                     <div key={index} className={styles.Card}>
