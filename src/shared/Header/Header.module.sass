@@ -50,6 +50,11 @@
 
             &:hover
                 opacity: 0.8
+    
+    &__ConfigWrapper
+        display: flex
+        align-items: center
+        gap: 2rem
 
     &__Nav
         display: flex
@@ -108,6 +113,24 @@
             a
                 font-size: 2.4rem
                 color: $text-main
+
+    &__ThemeToggle
+        background: none
+        border: none
+        color: $text-main
+        font-size: 2.4rem
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0.5rem
+        border-radius: 50%
+        transition: background 0.3s ease, color 0.3s ease
+        z-index: 1001
+        
+        &:hover
+            background: rgba(255, 255, 255, 0.1)
+            color: $primary-accent
 
     &__MenuToggle
         display: none

@@ -1,25 +1,24 @@
-// Modern Dark Theme Palette
-$background-main: #0a0a0c
-$background-secondary: #13131f
-$background-glass: rgba(19, 19, 31, 0.7)
+// Variables now point to CSS Custom Properties defined in globals.sass
+// This allows dynamic switching without changing SASS compilation
 
-$primary-accent: #6366f1
-$secondary-accent: #ec4899
-$tertiary-accent: #8b5cf6
+$background-main: var(--background-main)
+$background-secondary: var(--background-secondary)
+$background-glass: var(--background-glass)
 
-$text-main: #ffffff
-$text-secondary: #94a3b8
-$text-muted: #64748b
+$primary-accent: var(--primary-accent)
+$secondary-accent: var(--secondary-accent)
 
-$border-light: rgba(255, 255, 255, 0.1)
-$border-hover: rgba(99, 102, 241, 0.5)
+$text-main: var(--text-main)
+$text-secondary: var(--text-secondary)
+$text-muted: var(--text-muted)
 
-$gradient-primary: linear-gradient(135deg, $primary-accent, $secondary-accent)
-$gradient-dark: linear-gradient(180deg, rgba(19, 19, 31, 0), $background-main)
+$border-light: var(--border-light)
 
-$font-primary: 'Outfit', sans-serif
-$font-secondary: 'Inter', sans-serif
+$gradient-primary: var(--gradient-primary)
 
 $shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
 $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)
-$shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3)
+$shadow-glow: var(--shadow-glow)
+
+$font-primary: 'Outfit', sans-serif
+$font-secondary: 'Inter', sans-serif
